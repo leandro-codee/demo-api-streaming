@@ -1,0 +1,80 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definición de gradientes -->
+  <defs>
+    <linearGradient id="timeTraditionalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4B0082" />
+      <stop offset="100%" style="stop-color:#FF4D4D" />
+    </linearGradient>
+    <linearGradient id="timeStreamingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000080" />
+      <stop offset="100%" style="stop-color:#FF8C00" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#FFFFFF" />
+
+  <!-- Grid -->
+  <g stroke="#EEEEEE" stroke-width="1">
+    <line x1="100" y1="50" x2="100" y2="350" />
+    <line x1="100" y1="350" x2="700" y2="350" />
+    <line x1="100" y1="200" x2="700" y2="200" />
+    <line x1="100" y1="125" x2="700" y2="125" />
+    <line x1="100" y1="275" x2="700" y2="275" />
+  </g>
+
+  <!-- Bars for 1GB -->
+  <g transform="translate(200,0)">
+    <!-- Traditional -->
+    <rect x="0" y="230" width="40" height="120" fill="url(#timeTraditionalGradient)" opacity="0.9" />
+    <!-- Streaming -->
+    <rect x="50" y="220" width="40" height="130" fill="url(#timeStreamingGradient)" opacity="0.9" />
+
+    <!-- Diagonal labels -->
+    <text transform="translate(20,380) rotate(45)" text-anchor="start" font-size="12" fill="#333">1GB Tradicional</text>
+    <text transform="translate(70,380) rotate(45)" text-anchor="start" font-size="12" fill="#333">1GB Streaming</text>
+
+    <!-- Time values -->
+    <text x="20" y="220" text-anchor="middle" font-size="12" fill="#333">70s</text>
+    <text x="70" y="210" text-anchor="middle" font-size="12" fill="#333">76s</text>
+  </g>
+
+  <!-- Bars for 2GB -->
+  <g transform="translate(400,0)">
+    <!-- Traditional -->
+    <rect x="0" y="160" width="40" height="190" fill="url(#timeTraditionalGradient)" opacity="0.9" />
+    <!-- Streaming -->
+    <rect x="50" y="170" width="40" height="180" fill="url(#timeStreamingGradient)" opacity="0.9" />
+
+    <!-- Diagonal labels -->
+    <text transform="translate(20,380) rotate(45)" text-anchor="start" font-size="12" fill="#333">2GB Tradicional</text>
+    <text transform="translate(70,380) rotate(45)" text-anchor="start" font-size="12" fill="#333">2GB Streaming</text>
+
+    <!-- Time values -->
+    <text x="20" y="150" text-anchor="middle" font-size="12" fill="#333">140s</text>
+    <text x="70" y="160" text-anchor="middle" font-size="12" fill="#333">130s</text>
+  </g>
+
+  <!-- Axis -->
+  <g stroke="#333" stroke-width="2">
+    <line x1="100" y1="350" x2="700" y2="350" />
+    <line x1="100" y1="50" x2="100" y2="350" />
+  </g>
+
+  <!-- Labels -->
+  <text x="400" y="440" text-anchor="middle" font-size="14" fill="#333">Tamaño del Archivo</text>
+  <text x="50" y="200" text-anchor="middle" font-size="14" fill="#333" transform="rotate(-90,50,200)">Tiempo
+    (segundos)</text>
+
+  <!-- Legend -->
+  <g transform="translate(600,80)">
+    <rect x="0" y="0" width="20" height="20" fill="url(#timeTraditionalGradient)" />
+    <text x="30" y="15" font-size="12" fill="#333">Tradicional</text>
+    <rect x="0" y="30" width="20" height="20" fill="url(#timeStreamingGradient)" />
+    <text x="30" y="45" font-size="12" fill="#333">Streaming</text>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Tiempo de Procesamiento por
+    Tamaño de Archivo</text>
+</svg>
